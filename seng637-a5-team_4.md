@@ -55,6 +55,9 @@ The default risk parameters provided in the RDC tool:
 | Developer's Risk (α)     | 0.1   |
 | User's Risk (β)          | 0.1   |
 
+<img width="471" height="198" alt="image" src="https://github.com/user-attachments/assets/beddb081-2e4a-4266-bc55-759fd5658e78" />
+
+
 The original dataset was given in terms of failure counts per time interval, rather than exact times between failures, which are required for RDC analysis. To address this, the data was transformed by assuming that failures are uniformly distributed within each time interval.
 
 For example:
