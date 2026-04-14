@@ -92,6 +92,8 @@ RDC dataset can be found:
 
 - [csv file](RDC_part_2_data.csv)
 
+The full RDC sheet that we used for part 2 can be found [here](RDC_sheet_part_2.xlsm).
+
 ## RDC Graphs
 
 ### First RDC graph
