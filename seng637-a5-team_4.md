@@ -86,7 +86,11 @@ In summary, the dataset required preprocessing before it could be used in the RD
 
 This prepared dataset was then used to plot the RDC and assess whether the system meets the required MTTF target.
 
-RDC dataset can be found **[here](modified_artifacts/RDC_Failure_Data.xlsx)**.
+RDC dataset can be found:
+
+- [md file](RDC_part_2_data.md)
+
+- [csv file](RDC_part_2_data.csv)
 
 ## RDC Graphs
 
