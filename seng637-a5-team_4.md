@@ -29,10 +29,66 @@ Time to Failure Plot:
 Intensity Plot:
 ![Intensity Plot](./artifacts/c-sfrat/intensity-plot.png)
 
-s
+# Result of Range Analysis
 
-### A discussion on decision making given a target failure rate
-s
+From the provided plots, the failure behavior of the system changes across different intervals.
+
+In the early intervals (approximately 1–20), the cumulative failure curve increases smoothly and steadily. The failure intensity plot also shows relatively moderate and stable values during this region. Both DW3 and GM models closely follow the actual data in this range, indicating predictable system behavior suitable for modeling.
+
+Around interval 20, there is a clear sharp increase in cumulative failures. The failure intensity plot shows significant spikes, indicating sudden bursts of failures and increased variability. Beyond this point, the data becomes more irregular and less stable.
+
+A subset of 21 out of 31 intervals (approximately 70% of the dataset) is used to train the models, with the remaining intervals used for prediction. From the plots, this choice appears reasonable, as the models trained on this subset are still able to closely follow the overall trend in the later intervals.
+
+Therefore, the earlier portion of the data (approximately intervals 1–20) is more suitable for analysis due to its stability, while the later intervals highlight important but volatile system behavior that affects prediction accuracy.
+
+---
+
+# Failure Rate and Reliability of the SUT
+
+## Failure Rate
+
+From the cumulative failure plot, the total number of failures at interval 31 is approximately 92. Therefore, the average failure rate is:
+
+Failure Rate = 92 / 31 ≈ 2.96 failures per interval
+
+The failure intensity plot shows that the failure rate is not constant over time. In the early intervals, it remains relatively low (around 1–3 failures per interval). Around interval 20, there are significant spikes where the failure rate increases sharply, exceeding 7 and even 10 failures per interval. After this point, the failure rate remains variable.
+
+This indicates that the system exhibits non-uniform and bursty failure behavior.
+
+## Reliability (MTTF)
+
+The Mean Time To Failure (MTTF) is calculated as:
+
+MTTF = 1 / 2.96 ≈ 0.34 intervals
+
+This low MTTF indicates that failures occur frequently, suggesting relatively low system reliability.
+
+## Model Performance
+
+Using the first 21 intervals for training, both DW3 and GM models predict the remaining intervals.
+
+At interval 31:
+- Raw Data: Failure Rate ≈ 2.96, MTTF ≈ 0.337  
+- DW3 Prediction: Failure Rate ≈ 2.94, MTTF ≈ 0.341  
+- GM Prediction: Failure Rate ≈ 2.90, MTTF ≈ 0.344  
+
+The predicted values are very close to the actual values, indicating that both models provide a good overall fit to the data.
+
+However, from the failure intensity plot, both models smooth out the sharp spikes observed in the real data. This suggests that while the models capture the general trend effectively, they may underestimate sudden bursts of failures.
+
+---
+
+# Decision Making Based on Target Failure Rate
+
+Assume that the acceptable target failure rate for the system is 4 failures per interval.
+
+The average failure rate of the system is approximately 2.96 failures per interval, which is below the target threshold. Based on this average, the system can be considered acceptable.
+
+However, the failure intensity plot shows that there are several intervals where the failure rate exceeds the target value, with spikes reaching significantly higher levels, particularly around interval 20. This indicates that the system experiences periods of high instability.
+
+Therefore, relying solely on the average failure rate can be misleading. While the system is acceptable on average, its actual behavior shows intermittent violations of the target threshold.
+
+In conclusion, the system can be considered acceptable overall but not consistently reliable. The presence of significant failure spikes suggests that continuous monitoring and potential improvements are necessary to ensure stable and predictable performance.
 
 ### A discussion on the advantages and disadvantages of reliability growth analysis
 | Aspect                 | Advantages                                                                         | Disadvantages                                                                 |
