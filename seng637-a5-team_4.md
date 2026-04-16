@@ -2,12 +2,12 @@
 
 **Lab. Report \#5 – Software Reliability Assessment**
 
-| Group 4       |   |
-|-----------------|---|
-| Zohara Kamal |   |
-| Thanoshan Vijayanandan |   |
-| Minh Le |   |
-| Shuvam Agarwala |   |
+| Group 4       |  
+|-----------------|
+| Zohara Kamal |  
+| Thanoshan Vijayanandan |  
+| Minh Le |  
+| Shuvam Agarwala |  
 
 # Introduction
 In this assignment, we explore the use of Reliability Growth Testing and Reliability Demonstration Chart to assess the reliability of a software system. Then we will compare these techniques to see what they are like and how they are different from one another.
@@ -100,49 +100,52 @@ The full RDC sheet that we used for part 2 can be found [here](RDC_sheet_part_2.
 ## RDC Graphs
 
 ### First RDC graph
+The SUT almost goes into the reject region.
 - Maximum Acceptable Number of Failures = 92
 - FIO = 92 failures/31 intervals = 2.97
 - MTTF = 1/2.97 = 0.337
 
-<img width="666" height="144" alt="image" src="https://github.com/user-attachments/assets/dfe957da-9302-4a6b-8fbe-37abf54cde8f" />
+<img width="681" height="147" alt="image" src="https://github.com/user-attachments/assets/19581a23-6a70-420d-806f-b20c03b964d6" />
 
-<img width="641" height="569" alt="image" src="https://github.com/user-attachments/assets/63f74442-4a0a-4c9d-baee-68a5ea7ae15e" />
+<img width="781" height="704" alt="image" src="https://github.com/user-attachments/assets/ebfa0a29-ef9c-4de4-96da-df3f012db16b" />
+
 
 ### Second RDC graph (minimum MTTF)
 The minimum MTTF for the system to be considered acceptable. This minimum was determined by changing the FIO until a minimum was found; where the SUT barely enters the accept region. 
-- Maximum Acceptable Number of Failures = 700
-- FIO = 700 failures/31 intervals = 22.58
-- MTTF = 1/22.58 = 0.044
+- Maximum Acceptable Number of Failures = 1200
+- FIO = 1200 failures/31 intervals = 38.70
+- MTTF = 1/38.70 = 0.026
 
-<img width="674" height="143" alt="image" src="https://github.com/user-attachments/assets/8ffabcf4-bfb0-4767-8301-ec5963d16a1b" />
+<img width="675" height="146" alt="image" src="https://github.com/user-attachments/assets/1e77dddb-aa0c-4114-b6d3-779956080e2d" />
 
-<img width="641" height="569" alt="image" src="https://github.com/user-attachments/assets/23688649-1584-484a-ac85-b23999483327" />
+<img width="781" height="705" alt="image" src="https://github.com/user-attachments/assets/86bca538-fed7-4da1-b7da-ba3ffb455779" />
+
 
 ### Thỉrd RDC graph (double the minimum MTTF)
-The third plot is double the minimum MTTF. In this case, the SUT almost goes into the reject region.
-- Maximum Acceptable Number of Failures = 350
-- FIO = 700 failures/31 intervals = 11.29
-- MTTF = 1/22.58 = 0.088
+The third plot is double the minimum MTTF. In this case, the SUT goes into the continue testing region and a bit in reject region.
+- Maximum Acceptable Number of Failures = 600
+- FIO = 600 failures/31 intervals = 19.35
+- MTTF = 1/19.35 = 0.052
 
 When the MTTF is doubled, the requirement becomes much stricter. This means the system is expected to fail less often. The allowed failure rate becomes smaller. The accept region becomes smaller. Because of this, the failure data gets very close to the reject region. This shows that the system cannot meet this high MTTF requirement. So, this MTTF is too high for the system.
 
-<img width="676" height="144" alt="image" src="https://github.com/user-attachments/assets/1619c679-401e-415e-9c5f-9d071094a341" />
+<img width="683" height="154" alt="image" src="https://github.com/user-attachments/assets/38148b8e-2d3d-4c8a-a861-1ba27f8b0338" />
 
-<img width="641" height="569" alt="image" src="https://github.com/user-attachments/assets/0ffd6180-f7fb-4991-a9fd-cfb3a7407e17" />
+<img width="775" height="709" alt="image" src="https://github.com/user-attachments/assets/18ac66d0-601b-46ba-b5a5-9ce8ca12cd7e" />
+
 
 ### Fourth RDC graph (half the minimum MTTF)
 The fourth plot is half the minimum MTTF. In this case, the SUT goes into the accept region.
-- Maximum Acceptable Number of Failures = 1400
-- FIO = 700 failures/31 intervals = 45.16
-- MTTF = 1/22.58 = 0.022
+- Maximum Acceptable Number of Failures = 2400
+- FIO = 2400 failures/31 intervals = 77.42
+- MTTF = 1/77.42 = 0.013
 
 When the MTTF is cut in half, the requirement becomes easier. This means the system is allowed to fail more often. The allowed failure rate becomes larger. The accept region becomes bigger. Because of this, the failure data clearly falls in the accept region. This shows that the system meets this lower MTTF requirement. So, this MTTF is easy to satisfy, maybe too easy.
 
-<img width="680" height="152" alt="image" src="https://github.com/user-attachments/assets/8b4c35b5-5e3e-4cc3-a3ec-1b031f1d9c0e" />
+<img width="679" height="148" alt="image" src="https://github.com/user-attachments/assets/f08a31b6-de6a-4cce-a882-23611d2ac52f" />
 
-<img width="641" height="569" alt="image" src="https://github.com/user-attachments/assets/d8a0cbcd-4637-4788-a66d-b70609c81916" />
+<img width="782" height="701" alt="image" src="https://github.com/user-attachments/assets/13dea72b-1a24-47ba-a99b-2ce8f06f68cc" />
 
-Please note that the white region is still the acceptance region (expanded)
 
 # Comparison of Results
 
