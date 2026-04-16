@@ -157,3 +157,11 @@ The SUT almost goes into the reject region.
 # Difficulties encountered, challenges overcome, and lessons learned
 
 # Comments/feedback on the lab itself
+
+1. The assignment description document [`Assignment_Description.md`](Assignment_Description.md) is not very detailed this time.
+
+2. One of the recommended software **SRTAT-SRE-tool** is very hard to use. There is no documentation available for it as well.
+
+3. The Reliability Demonstration Chart should have allowed input of all the failure data. It was very difficult to get it to properly graph the data.
+
+4. There was very little documentation on the failure dataset.
