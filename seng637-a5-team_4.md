@@ -99,18 +99,7 @@ The full RDC sheet that we used for part 2 can be found [here](RDC_sheet_part_2.
 
 ## RDC Graphs
 
-### First RDC graph
-The SUT almost goes into the reject region.
-- Maximum Acceptable Number of Failures = 92
-- FIO = 92 failures/31 intervals = 2.97
-- MTTF = 1/2.97 = 0.337
-
-<img width="681" height="147" alt="image" src="https://github.com/user-attachments/assets/19581a23-6a70-420d-806f-b20c03b964d6" />
-
-<img width="781" height="704" alt="image" src="https://github.com/user-attachments/assets/ebfa0a29-ef9c-4de4-96da-df3f012db16b" />
-
-
-### Second RDC graph (minimum MTTF)
+### First RDC graph (minimum MTTF)
 The minimum MTTF for the system to be considered acceptable. This minimum was determined by changing the FIO until a minimum was found; where the SUT barely enters the accept region. 
 - Maximum Acceptable Number of Failures = 1200
 - FIO = 1200 failures/31 intervals = 38.70
@@ -121,7 +110,7 @@ The minimum MTTF for the system to be considered acceptable. This minimum was de
 <img width="781" height="705" alt="image" src="https://github.com/user-attachments/assets/86bca538-fed7-4da1-b7da-ba3ffb455779" />
 
 
-### Thỉrd RDC graph (double the minimum MTTF)
+### Second RDC graph (double the minimum MTTF)
 The third plot is double the minimum MTTF. In this case, the SUT goes into the continue testing region and a bit in reject region.
 - Maximum Acceptable Number of Failures = 600
 - FIO = 600 failures/31 intervals = 19.35
@@ -134,7 +123,7 @@ When the MTTF is doubled, the requirement becomes much stricter. This means the 
 <img width="775" height="709" alt="image" src="https://github.com/user-attachments/assets/18ac66d0-601b-46ba-b5a5-9ce8ca12cd7e" />
 
 
-### Fourth RDC graph (half the minimum MTTF)
+### Third RDC graph (half the minimum MTTF)
 The fourth plot is half the minimum MTTF. In this case, the SUT goes into the accept region.
 - Maximum Acceptable Number of Failures = 2400
 - FIO = 2400 failures/31 intervals = 77.42
@@ -146,6 +135,16 @@ When the MTTF is cut in half, the requirement becomes easier. This means the sys
 
 <img width="782" height="701" alt="image" src="https://github.com/user-attachments/assets/13dea72b-1a24-47ba-a99b-2ce8f06f68cc" />
 
+
+### Fourth RDC graph (maximum acceptable number of failures = number of failures)
+The SUT almost goes into the reject region.
+- Maximum Acceptable Number of Failures = 92
+- FIO = 92 failures/31 intervals = 2.97
+- MTTF = 1/2.97 = 0.337
+
+<img width="681" height="147" alt="image" src="https://github.com/user-attachments/assets/19581a23-6a70-420d-806f-b20c03b964d6" />
+
+<img width="781" height="704" alt="image" src="https://github.com/user-attachments/assets/ebfa0a29-ef9c-4de4-96da-df3f012db16b" />
 
 # Comparison of Results
 
