@@ -200,15 +200,57 @@ The SUT almost goes into the reject region.
 # Comparison of Results
 
 # Discussion on Similarity and Differences of the Two Techniques
+### Similarities between Reliability Growth Testing (RGT) and Reliability Demonstration Chart (RDC)
+
+- Both approaches are employed to estimate and analyze system reliability.
+- Each method depends on predefined reliability metrics such as failure rate or Mean Time To Failure (MTTF).
+- Both require observed failure data as input for analysis.
+
+### Differences between RGT and RDC
+
+- Reliability Growth Testing (RGT) focuses on predicting future reliability trends using historical failure data, whereas Reliability Demonstration Chart (RDC) is used to assess whether the system meets specified reliability targets based on observed data.
+
+- RGT applies statistical or mathematical failure growth models to generate reliability forecasts, while RDC utilizes predefined risk profiles to evaluate system reliability compliance.
+
+- RGT primarily provides predictive insights based on the chosen model and available data, whereas RDC supports decision-making by determining whether the System Under Test (SUT) satisfies acceptable reliability criteria.
 
 # How the team work/effort was divided and managed
-
+| Team member                     | Section                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| Zohara Kamal            | Difficulties and challenges, and comments and feedback |
+| Thanoshan Vijayanandan             | Part 1: Reliability Growth Testing, Part 2: Reliability Demonstration Chart   |
+| Minh Le      | Part 1: Reliability Growth Testing, Part 2: Reliability Demonstration Chart |
+| Shuvam Agarwala | Part 2: Reliability Demonstration Chart                      |
 
 # Difficulties encountered, challenges overcome, and lessons learned
+- The failure dataset was not directly compatible with the Reliability Demonstration Chart (RDC) format. Specifically, the data was provided as failures per interval, whereas RDC requires time-between-failures data.
+
+- To address this mismatch, a transformation was applied by assuming failures were uniformly distributed within each interval to derive time-between-failures. However, this assumption is unrealistic in practice, which may introduce inaccuracies in the results.
+
+- Additionally, no explicit target values for MTTF/FIO or a defined risk profile were provided for the RDC analysis. A default risk profile was therefore assumed, but alternative profiles could significantly impact the evaluation outcomes. As a result, it is not possible to conclusively determine whether the System Under Test (SUT) meets acceptability criteria.
+
+- The provided RDC dataset was inconsistent with the given failure data of the SUT. Consequently, substantial modifications to the RDC spreadsheet were required to accommodate the necessary number of data points.
+
+- The RDC chart did not correctly visualize the accept, continue, and reject regions. Furthermore, adjustments to the risk profile did not reflect on the graph, necessitating manual modifications to the underlying Excel sheet.
+
+- The C-SFRAT tool functioned correctly in a Windows environment; however, compatibility issues and execution errors were encountered when attempting to run it on macOS.
 
 # Comments/feedback on the lab itself
 
-1. The assignment description document [`Assignment_Description.md`](Assignment_Description.md) is not very detailed this time.
-2. One of the recommended software **SRTAT-SRE-tool** is very hard to use. There is no documentation available for it as well.
-3. The Reliability Demonstration Chart should have allowed input of all the failure data. It was very difficult to get it to properly graph the data.
-4. There was very little documentation on the failure dataset.
+- The Reliability Demonstration Chart should have allowed input of all the failure data. It was very difficult to get it to properly graph the data.
+
+- There was very little documentation on the failure dataset.
+
+- The lab provided practical exposure to reliability engineering concepts such as Reliability Growth Testing (RGT) and Reliability Demonstration Charts (RDC), helping bridge theory and application.
+
+- It encouraged critical thinking by requiring us to handle imperfect data and make reasonable assumptions during analysis.
+
+- The use of real-world-like failure datasets made the exercise more realistic and relevant to industry scenarios.
+
+- The lab introduced useful tools (e.g., C-SFRAT), giving hands-on experience with software used in reliability analysis.
+
+- It highlighted the challenges involved in data preprocessing and format conversion, which are important skills in software engineering and data analysis.
+
+- The comparison between RGT and RDC helped in understanding the strengths and limitations of different reliability assessment techniques.
+
+- It emphasized the importance of model assumptions and their impact on the validity of results.
