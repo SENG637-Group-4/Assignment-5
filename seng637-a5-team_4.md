@@ -74,7 +74,7 @@ Therefore, relying solely on the average failure rate can be misleading. While t
 
 In conclusion, the system can be considered acceptable overall but not consistently reliable. The presence of significant failure spikes suggests that continuous monitoring and potential improvements are necessary to ensure stable and predictable performance.
 
-### A discussion on the advantages and disadvantages of reliability growth analysis
+### Advantages and disadvantages of reliability growth analysis
 | Aspect                 | Advantages                                                                         | Disadvantages                                                                 |
 | ---------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Reliability estimation | Helps estimate current reliability and forecast future reliability from test data. | Predictions can be inaccurate if the data is incomplete or noisy.             |
@@ -186,13 +186,23 @@ The SUT almost goes into the reject region.
 
 <img width="781" height="704" alt="image" src="https://github.com/user-attachments/assets/ebfa0a29-ef9c-4de4-96da-df3f012db16b" />
 
+### Advantages and disadvantages of RDC
+| Aspect                | Advantages                                                        | Disadvantages                                                 |
+| --------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Simplicity            | Easy to understand and communicate results                        | May oversimplify complex reliability behavior and ignore underlying failure patterns                 |
+| Decision-making       | Clear accept, reject and continue regions support fast decisions   | Highly dependent on predefined thresholds and risk levels     |
+| Efficiency            | Low time and cost, minimal computation required                   | Trades off depth and precision for speed                      |
+| Visualization         | Graphical format makes trends and outcomes easy to interpret      | Can be misleading with limited or noisy data                  |
+| Parameter sensitivity | Flexible through parameters (maximum acceptable number of failures and MTTF) to match requirements | Incorrect parameter choice (like MTTFmin) invalidates results |
+| Quantitative accuracy | Provides general reliability indication                           | Cannot compute exact reliability or availability values       |
+| Data dependency       | Works with relatively small datasets (default setting is 16, in this assignment is 92)                             | Strongly affected by data quality, sample size, and representativeness of failures             |
+
 # Comparison of Results
 
 # Discussion on Similarity and Differences of the Two Techniques
 
 # How the team work/effort was divided and managed
 
-# 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
