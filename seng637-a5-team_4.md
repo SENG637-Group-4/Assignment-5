@@ -239,10 +239,6 @@ The SUT almost goes into the reject region.
 
 # Comments/feedback on the lab itself
 
-- The Reliability Demonstration Chart should have allowed input of all the failure data. It was very difficult to get it to properly graph the data.
-
-- There was very little documentation on the failure dataset.
-
 - The lab provided practical exposure to reliability engineering concepts such as Reliability Growth Testing (RGT) and Reliability Demonstration Charts (RDC), helping bridge theory and application.
 
 - It encouraged critical thinking by requiring us to handle imperfect data and make reasonable assumptions during analysis.
