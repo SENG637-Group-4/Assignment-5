@@ -9,6 +9,24 @@
 | Minh Le |  
 | Shuvam Agarwala |  
 
+# Table of Contents
+
+[Introduction](#introduction)
+
+[Assessment Using Reliability Growth Testing](#assessment-using-reliability-growth-testing)
+
+[Assessment Using Reliability Demonstration Chart](#assessment-using-reliability-demonstration-chart)
+
+[Comparison of Results](#comparison-of-results)
+
+[Discussion on Similarities and Differences](#discussion-on-similarity-and-differences-of-the-two-techniques)
+
+[Team Work and Effort Distribution](#how-the-team-workeffort-was-divided-and-managed)
+
+[Difficulties, Challenges, and Lessons Learned](#difficulties-encountered-challenges-overcome-and-lessons-learned)
+
+[Comments and Feedback on the Lab](#commentsfeedback-on-the-lab-itself)
+
 # Introduction
 In this assignment, we explore the use of Reliability Growth Testing and Reliability Demonstration Chart to assess the reliability of a software system. Then we will compare these techniques to see what they are like and how they are different from one another.
 
@@ -200,6 +218,13 @@ The SUT almost goes into the reject region.
 | Data dependency       | Works with relatively small datasets (default setting is 16, in this assignment is 92)                             | Strongly affected by data quality, sample size, and representativeness of failures             |
 
 # Comparison of Results
+The results obtained from RGT and the RDC provide two complementary perspectives on the reliability of the SUT.
+
+From the RGT analysis, both the DW3 and GM models show that the system has an average failure rate of approximately 2.96 failures per interval and an MTTF of around 0.34. These models fit the overall trend of the failure data well and indicate that the system is acceptable when evaluated against the target failure rate of 4 failures per interval. However, RGT also reveals important details about system behavior, particularly the presence of significant spikes in failure intensity around intervals 20 to 23. This suggests that while the system performs adequately on average, its reliability is not stable over time.
+
+The RDC analysis focuses on whether the system meets specific reliability thresholds under different MTTF assumptions. The results show that the acceptability of the system strongly depends on the chosen MTTF requirement. When the minimum MTTF is 0.026, the system clearly falls within the accept region, indicating that the requirement is too lenient. When the MTTF is increased (double as the graph 0.052), the system moves into the continue or reject regions, suggesting that the requirement is too strict. At an MTTF close to the observed value (approximately 0.337), the system is near the boundary between acceptance and continue testing, indicating marginal reliability. With RDC, we can easily see when the observed failures cross into the reject or accept region, making RDC more efficient at determining if the SUT passes.
+
+Overall, we believe that the two techniques are optimized for different things with the RGT specialized in predicting the behavior of failure trends and the RDC specialize in the decision making of when testing can stop based on various risk factors.
 
 # Discussion on Similarity and Differences of the Two Techniques
 ### Similarities between Reliability Growth Testing (RGT) and Reliability Demonstration Chart (RDC)
@@ -216,10 +241,13 @@ The SUT almost goes into the reject region.
 
 - RGT primarily provides predictive insights based on the chosen model and available data, whereas RDC supports decision-making by determining whether the System Under Test (SUT) satisfies acceptable reliability criteria.
 
+Overall, RGT provides a more detailed and continuous understanding of system reliability by modeling trends and capturing variations in failure behavior. It highlights both the overall performance and the instability in certain intervals. RDC provides a more binary, decision-oriented evaluation by determining whether the system meets predefined reliability criteria. However, its outcome is highly sensitive to parameter choices such as MTTF and acceptable failure limits.
+
+
 # How the team work/effort was divided and managed
 | Team member                     | Section                                                                 |
 |--------------------------|-------------------------------------------------------------------------|
-| Zohara Kamal            | Difficulties and challenges, and comments and feedback |
+| Zohara Kamal            | Lab report, Part 1: Reliability Growth Testing|
 | Thanoshan Vijayanandan             | Part 1: Reliability Growth Testing, Part 2: Reliability Demonstration Chart   |
 | Minh Le      | Part 1: Reliability Growth Testing, Part 2: Reliability Demonstration Chart |
 | Shuvam Agarwala | Part 2: Reliability Demonstration Chart                      |
